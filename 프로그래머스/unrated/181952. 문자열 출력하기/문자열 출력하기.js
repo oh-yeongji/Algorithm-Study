@@ -4,7 +4,7 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-let input = ["HelloWorld!"];
+let input = [];
 
 rl.on('line', function (line) {
     input = [line];
