@@ -1,22 +1,5 @@
-function solution(dot) {
-    
-    if(dot[0]>0&&dot[1]>0)
-        {return 1}
-    else if(dot[0]<0&&dot[1]>0)
-    {
-        return  2
-    }
-    else if(dot[0]<0&&dot[1]<0)
-    {
-        return  3
-    }
-    else if(dot[0]>0&&dot[1]<0)
-    {
-        return  4
-    }
-    else(dot[0]===0||dot[1]===0)
-    {
-        return  null
-    }
-  
+const solution = (dot) => {
+ 
+    let result = dot[0] >0 && dot[1] > 0 ? 1 : dot[0] <0 && dot[1] > 0?2:dot[0] < 0 && dot[1]<0 ? 3: dot[0]>0 && dot[1]<0?4:null;
+    return result;
 }
