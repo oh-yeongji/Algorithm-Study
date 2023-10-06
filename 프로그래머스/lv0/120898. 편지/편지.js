@@ -1,4 +1,1 @@
-function solution(message) {
-const answer  = message.length *2;
-        return answer;
-}
+const solution = (message) => (message.length *2);
