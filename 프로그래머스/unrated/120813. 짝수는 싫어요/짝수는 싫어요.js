@@ -4,10 +4,10 @@ const solution = (n) => {
     let newArray = [];
     
     // n 보다 작은 홀수 
-    for( i=1; i<=n; i++ ){
-         if ( i%2 !== 0 ) {
+    for( i=1; i<=n; i+=2 ){
+      
        newArray.push(i);
-       }
+       
     }
    
     return newArray;
