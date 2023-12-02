@@ -1,5 +1,5 @@
 const solution = (s) => {
-    return s.toUpperCase().split("P").length === s.toUpperCase().split("Y").length ?
+    return ( s.match(/p/ig) || [] ).length === ( s.match(/y/ig) || [] ).length ?
         true : false
 
 }  
