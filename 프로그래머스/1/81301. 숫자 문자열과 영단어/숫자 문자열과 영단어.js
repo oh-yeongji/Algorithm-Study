@@ -13,12 +13,10 @@ const solution = (s) =>{
    nine: 9,
    }
 
-    let keys = Object.keys(obj);
-    for( i = 0; i < keys.length; i++){
-        let key = keys[i];
-        let value = obj[key];
-        let regex = RegExp( key,"g");
-      s = s.replace(regex, obj[key]);
-    }
+    Object.keys(obj).forEach( el =>{
+		
+        let regex = RegExp( el,"g");
+      s = s.replace(regex, obj[el]);
+      });
     return parseInt(s, 10);
 }
