@@ -1,8 +1,3 @@
-const solution = (x, n) => {
-    
-    let list =[];
-        for( i = 1; i <= n ; i++ ) {
-             list.push( x * i ) ;
-    }
-    return list;
+function solution(x, n) {
+    return Array(n).fill(x).map((v, i) => (i + 1) * v)
 }
