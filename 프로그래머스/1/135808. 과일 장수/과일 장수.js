@@ -1,8 +1,1 @@
-function solution(k, m, score) {
-    let answer = 0;
-    const sortedScore = score.slice().sort((a, b) => a - b).slice(score.length % m);
-    for (let i = 0; i < sortedScore.length; i += m) {
-        answer += sortedScore[i] * m;
-    }
-    return answer;
-}
+solution = (_, m, s) => s.sort().filter((_, i) => !((s.length - i) % m)).reduce((a, v) => a + v, 0) * m
