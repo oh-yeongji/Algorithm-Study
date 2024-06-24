@@ -1,3 +1,7 @@
 function solution(name, yearning, photo) {
-    return photo.map((v)=> v.reduce((a, c)=> a += yearning[name.indexOf(c)] ?? 0, 0))
+    let obj = {};
+    for(let i = 0; i < name.length; i++){
+        obj[name[i]] = yearning[i];
+    }
+    return photo.map(value => value.map(v => obj[v] ? obj[v] : 0).reduce((acc,cur) => acc + cur,0))
 }
